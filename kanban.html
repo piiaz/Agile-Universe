@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="kanbanPageTitle">Kanban Planet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&family=Cairo:wght@300;400;700&family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-kanban">
+
+    <div id="stars1"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div class="nebula nebula-kanban"></div>
+
+    <div class="meteor meteor-1"></div>
+    <div class="meteor meteor-2"></div>
+    <div class="meteor meteor-3"></div>
+    <div class="meteor meteor-4"></div>
+    <div class="meteor meteor-5"></div>
+
+    <a href="home.html" class="back-arrow-button"></a>
+
+    <div class="lang-dropdown">
+        <button class="lang-selected">English</button>
+        <div class="lang-options">
+            <button data-lang="en">English</button>
+            <button data-lang="ar">العربية</button>
+            <button data-lang="ku">کوردی</button>
+            <button data-lang="fa">فارسی</button>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <header class="hero">
+            <h1 data-key="kanbanTitle" id="hero-title">Kanban Planet</h1>
+            <p class="subtitle" data-key="kanbanSubtitle">A method for visualizing work and managing flow.</p>
+        </header>
+
+        <main>
+            <section class="card-section">
+                <h2 data-key="kanbanS1Title">What is Kanban?</h2>
+                <p data-key="kanbanS1P1">Kanban is a method to manage and improve work across human systems. This approach aims to manage work by balancing demands with available capacity, and by improving the handling of system-level bottlenecks.</p>
+                <p data-key="kanbanS1P2">The core idea is to **visualize the workflow**, **limit Work in Progress (WIP)**, and **manage the flow** of work. It is an evolutionary method that promotes gradual improvement.</p>
+            </section>
+            
+            <section class="card-section">
+                <h2 data-key="kanbanS2Title">The Four Core Principles</h2>
+                <p data-key="kanbanS2P1">Kanban is built on a foundation of four principles to manage and improve the flow of value.</p>
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <h3 data-key="kanbanS2P1Title">1. Start With What You Do Now</h3>
+                        <p data-key="kanbanS2P1Desc">Kanban does not require radical change. It is designed to be applied directly to your current workflow, respecting existing roles and processes.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <h3 data-key="kanbanS2P2Title">2. Agree to Pursue Incremental Change</h3>
+                        <p data-key="kanbanS2P2Desc">The team agrees that large-scale, radical changes are discouraged as they are often disruptive. Instead, the focus is on small, continuous improvements.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <h3 data-key="kanbanS2P3Title">3. Respect Current Process & Roles</h3>
+                        <p data-key="kanbanS2P3Desc">Unlike other methods, Kanban does not prescribe specific roles or processes. It recognizes that your current setup has value and seeks to improve it, not replace it.</p>
+                    </div>
+                    <div class="pillar-card">
+                        <h3 data-key="kanbanS2P4Title">4. Encourage Leadership at All Levels</h3>
+                        <p data-key="kanbanS2P4Desc">Kanban encourages continuous improvement from everyone in the organization, from individual contributors to senior management.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card-section">
+                <h2 data-key="kanbanS3Title">The Six Core Practices</h2>
+                <p data-key="kanbanS3P1">These are the practical, actionable practices required to implement the Kanban method.</p>
+                <div class="roles-grid">
+                    <div class="role-card">
+                        <h3 data-key="kanbanS3P1Title">1. Visualize the Workflow</h3>
+                        <p data-key="kanbanS3P1Desc">This is the **Kanban Board**. By creating a visual model of your work and workflow, you can observe the flow of work and identify problems.</p>
+                    </div>
+                    <div class="role-card">
+                        <h3 data-key="kanbanS3P2Title">2. Limit Work in Progress (WIP)</h3>
+                        <p data-key="kanbanS3P2Desc">This is the cornerstone of Kanban. By limiting how many items can be in progress at once, you reduce multitasking, prevent bottlenecks, and encourage a \"pull\" system.</p>
+                    </div>
+                    <div class="role-card">
+                        <h3 data-key="kanbanS3P3Title">3. Manage Flow</h3>
+                        <p data-key="kanbanS3P3Desc">The goal is to create a smooth, healthy flow of work. Instead of managing people, you manage the work as it moves through the system, monitoring for blockers.</p>
+                    </div>
+                    <div class="role-card">
+                        <h3 data-key="kanbanS3P4Title">4. Make Policies Explicit</h3>
+                        <p data-key="kanbanS3P4Desc">You cannot improve what you don't understand. Make the rules explicit (e.g., \"What does 'Done' mean for this column?\").</p>
+                    </div>
+                    <div class="role-card">
+                        <h3 data-key="kanbanS3P5Title">5. Implement Feedback Loops</h3>
+                        <p data-key="kanbanS3P5Desc">Feedback is essential for improvement. Examples include daily stand-up meetings, replenishment meetings, and service delivery reviews.</p>
+                    </div>
+                    <div class="role-card">
+                        <h3 data-key="kanbanS3P6Title">6. Improve Collaboratively</h3>
+                        <p data-key="kanbanS3P6Desc">Using the visual board and data from the flow, the team collaborates to identify and implement improvements to their process.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p data-key="footerText">© 2025 Zaid A. Shukur</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

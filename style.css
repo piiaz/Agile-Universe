@@ -1,0 +1,880 @@
+/* === Global Styles & Font === */
+html {
+    background-color: #0f051a; /* Darkest purple */
+}
+
+body {
+    background-color: transparent;
+    color: #f0e6ff; /* Light lavender/white */
+    /* Use Roboto for English, Cairo for AR/KU, Noto Naskh Arabic for FA */
+    font-family: 'Roboto', 'Cairo', 'Noto Naskh Arabic', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7; /* Increased for readability */
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin-top: 0;
+}
+
+h3 {
+    color: #e0cfff;
+}
+
+a {
+    color: #c49eff; /* Bright link color */
+    text-decoration: none;
+}
+
+p, li {
+    font-weight: 300;
+}
+
+strong {
+    font-weight: 700;
+    color: #fff;
+}
+
+/* === Space Theme === */
+
+@keyframes animStar {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-2000px); /* This loops with the 2000px height */
+    }
+}
+
+/* Layer 1: Small stars (700+) - Slowest speed */
+#stars1 {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    box-shadow: 1729px 185px #FFF, 1261px 635px #FFF, 174px 1279px #FFF, 1061px 1974px #FFF, 1509px 1240px #FFF, 1334px 101px #FFF, 246px 653px #FFF, 538px 1018px #FFF, 76px 1319px #FFF, 1590px 1869px #FFF, 1374px 1740px #FFF, 1378px 1832px #FFF, 130px 1705px #FFF, 1701px 867px #FFF, 1222px 1411px #FFF, 1475px 815px #FFF, 1146px 1695px #FFF, 1313px 1819px #FFF, 715px 1239px #FFF, 940px 135px #FFF, 428px 1215px #FFF, 188px 1618px #FFF, 839px 728px #FFF, 1172px 1765px #FFF, 1391px 544px #FFF, 1553px 259px #FFF, 1121px 1152px #FFF, 1723px 1435px #FFF, 1235px 561px #FFF, 1790px 1673px #FFF, 1494px 1756px #FFF, 1876px 1779px #FFF, 1528px 1500px #FFF, 701px 1195px #FFF, 1515px 694px #FFF, 492px 1714px #FFF, 1390px 1399px #FFF, 1025px 512px #FFF, 1729px 1313px #FFF, 1461px 1588px #FFF, 1060px 248px #FFF, 1039px 311px #FFF, 403px 26px #FFF, 345px 33px #FFF, 1051px 760px #FFF, 447px 1133px #FFF, 1812px 1332px #FFF, 1600px 1205px #FFF, 1386px 903px #FFF, 313px 1724px #FFF, 381px 1326px #FFF, 1944px 1975px #FFF, 1572px 1476px #FFF, 1083px 1771px #FFF, 1275px 1042px #FFF, 501px 1256px #FFF, 876px 161px #FFF, 1065px 1328px #FFF, 1060px 843px #FFF, 1007px 1881px #FFF, 785px 1583px #FFF, 141px 718px #FFF, 1269px 1032px #FFF, 1373px 1294px #FFF, 1118px 470px #FFF, 891px 1151px #FFF, 1692px 1868px #FFF, 469px 233px #FFF, 1948px 109px #FFF, 1370px 1424px #FFF, 459px 1928px #FFF, 1093px 803px #FFF, 1502px 376px #FFF, 1085px 1005px #FFF, 1097px 1932px #FFF, 663px 1836px #FFF, 1577px 697px #FFF, 1124px 338px #FFF, 552px 1245px #FFF, 143px 1948px #FFF, 621px 1530px #FFF, 1632px 1761px #FFF, 1599px 1999px #FFF, 1130px 1475px #FFF, 1735px 1528px #FFF, 911px 1362px #FFF, 1101px 1432px #FFF, 1500px 926px #FFF, 122px 1200px #FFF, 1111px 648px #FFF, 712px 1551px #FFF, 1832px 1605px #FFF, 1242px 1600px #FFF, 1431px 1450px #FFF, 1733px 93px #FFF, 1121px 292px #FFF, 1205px 1658px #FFF, 1391px 1484px #FFF, 423px 1934px #FFF, 1505px 441px #FFF, 1933px 731px #FFF, 1489px 1268px #FFF, 707px 321px #FFF, 1920px 461px #FFF, 381px 1726px #FFF, 915px 1640px #FFF, 1130px 425px #FFF, 1629px 1048px #FFF, 1431px 1539px #FFF, 1740px 1913px #FFF, 1648px 1200px #FFF, 1621px 546px #FFF, 929px 1657px #FFF, 1017px 1146px #FFF, 532px 1238px #FFF, 786px 1360px #FFF, 1871px 1199px #FFF, 1642px 158px #FFF, 1004px 973px #FFF, 101px 1020px #FFF, 1715px 127px #FFF, 160px 941px #FFF, 948px 1083px #FFF, 1404px 1731px #FFF, 1338px 1184px #FFF, 1181px 1609px #FFF, 1980px 1050px #FFF, 1585px 192px #FFF, 1929px 100px #FFF, 186px 379px #FFF, 192px 1318px #FFF, 584px 1563px #FFF, 792px 129px #FFF, 1851px 1581px #FFF, 381px 1397px #FFF, 1109px 1100px #FFF, 1178px 1047px #FFF, 1863px 1756px #FFF, 1801px 899px #FFF, 1373px 1776px #FFF, 1498px 107px #FFF, 1924px 1461px #FFF, 197px 108px #FFF, 1502px 1626px #FFF, 401px 1007px #FFF, 1948px 1337px #FFF, 1768px 1236px #FFF, 422px 1234px #FFF, 1391px 1494px #FFF, 321px 1059px #FFF, 1665px 789px #FFF, 417px 1121px #FFF, 1729px 1930px #FFF, 1101px 1862px #FFF, 1121px 555px #FFF, 1620px 1709px #FFF, 1706px 1063px #FFF, 1716px 139px #FFF, 1657px 1739px #FFF, 747px 1832px #FFF, 1011px 470px #FFF, 167px 1921px #FFF, 109px 1618px #FFF, 1004px 93px #FFF, 1750px 135px #FFF, 735px 237px #FFF, 1032px 97px #FFF, 1028px 175px #FFF, 313px 930px #FFF, 1624px 1275px #FFF, 1858px 198px #FFF, 1918px 1450px #FFF, 966px 1528px #FFF, 1640px 1733px #FFF, 1162px 1883px #FFF, 1478px 337px #FFF, 1381px 1637px #FFF, 1584px 1127px #FFF, 1017px 767px #FFF, 1276px 1974px #FFF, 1686px 1987px #FFF, 1968px 748px #FFF, 1060px 1383px #FFF, 212px 1720px #FFF, 1999px 1190px #FFF, 1653px 1305px #FFF, 1610px 493px #FFF, 1977px 1837px #FFF, 1499px 1045px #FFF, 1512px 1928px #FFF, 847px 1568px #FFF, 1286px 973px #FFF, 1774px 1621px #FFF, 1628px 1215px #FFF, 968px 1801px #FFF, 175px 1530px #FFF, 108px 909px #FFF, 1650px 1812px #FFF, 1630px 1238px #FFF, 1858px 1279px #FFF, 1711px 1757px #FFF, 1659px 1604px #FFF, 1494px 1515px #FFF, 1563px 661px #FFF, 715px 1292px #FFF, 1435px 1497px #FFF, 497px 1217px #FFF, 1515px 451px #FFF, 1869px 740px #FFF, 1230px 183px #FFF, 941px 1779px #FFF, 1891px 1904px #FFF, 1019px 1546px #FFF, 1400px 1673px #FFF, 1549px 1630px #FFF, 1210px 1353px #FFF, 1118px 490px #FFF, 1551px 1137px #FFF, 1601px 966px #FFF, 1746px 1435px #FFF, 1017px 1306px #FFF, 629px 1556px #FFF, 1479px 689px #FFF, 1565px 1355px #FFF, 203px 1474px #FFF, 1080px 1133px #FFF, 321px 185px #FFF, 1924px 1998px #FFF, 546px 1582px #FFF, 198px 1484px #FFF, 1705px 1709px #FFF, 725px 95px #FFF, 1375px 788px #FFF, 1146px 1141px #FFF, 1735px 441px #FFF, 1184px 878px #FFF, 1307px 1572px #FFF, 1232px 1474px #FFF, 1374px 1577px #FFF, 829px 1299px #FFF, 1640px 1869px #FFF, 1782px 1957px #FFF, 1111px 1109px #FFF, 1483px 1361px #FFF, 1211px 1826px #FFF, 868px 1559px #FFF, 129px 1957px #FFF, 198px 192px #FFF, 1629px 1941px #FFF, 740px 1599px #FFF, 1081px 1729px #FFF, 1205px 1716px #FFF, 1938px 1243px #FFF, 959px 1128px #FFF, 952px 1355px #FFF, 1138px 578px #FFF, 1851px 1701px #FFF, 1925px 843px #FFF, 1461px 819px #FFF, 1459px 584px #FFF, 1908px 1984px #FFF, 1113px 1100px #FFF, 810px 1228px #FFF, 23px 1934px #FFF, 1201px 1898px #FFF, 735px 33px #FFF, 1316px 1802px #FFF, 672px 1349px #FFF, 1302px 1251px #FFF, 532px 1656px #FFF, 1920px 886px #FFF, 1056px 1339px #FFF, 311px 1146px #FFF, 1928px 233px #FFF, 1632px 1010px #FFF, 1419px 1756px #FFF, 1281px 1046px #FFF, 1710px 1184px #FFF, 1521px 1475px #FFF, 1968px 1951px #FFF, 1852px 1483px #FFF, 109px 1494px #FFF, 531px 1618px #FFF, 929px 1555px #FFF, 948px 1254px #FFF, 1801px 321px #FFF, 1515px 1114px #FFF, 954px 1761px #FFF, 1269px 1305px #FFF, 177px 446px #FFF, 897px 1162px #FFF, 1481px 1948px #FFF, 747px 1118px #FFF, 1251px 1133px #FFF, 1801px 96px #FFF, 1097px 1559px #FFF, 1361px 1790px #FFF, 1809px 597px #FFF, 1753px 1308px #FFF, 940px 1878px #FFF, 1361px 644px #FFF, 707px 1137px #FFF, 978px 1217px #FFF, 1380px 1604px #FFF, 128px 1228px #FFF, 1599px 748px #FFF, 946px 1904px #FFF, 1904px 1484px #FFF, 1735px 1294px #FFF, 1656px 632px #FFF, 1403px 1055px #FFF, 549px 1121px #FFF, 866px 1238px #FFF, 1324px 1184px #FFF, 326px 1306px #FFF, 1819px 1319px #FFF, 477px 1908px #FFF, 1695px 1951px #FFF, 1011px 1362px #FFF, 623px 1858px #FFF, 727px 1709px #FFF, 1863px 1114px #FFF, 321px 109px #FFF, 1944px 129px #FFF, 1332px 1908px #FFF, 690px 1705px #FFF, 144px 933px #FFF, 1659px 1399px #FFF, 853px 1268px #FFF, 1419px 544px #FFF, 1729px 198px #FFF, 1774px 789px #FFF, 701px 338px #FFF, 1727px 1975px #FFF, 915px 1528px #FFF, 1924px 1121px #FFF, 1286px 819px #FFF, 964px 33px #FFF, 1512px 1556px #FFF, 1928px 1618px #FFF, 1588px 1656px #FFF, 1239px 1355px #FFF, 1146px 1275px #FFF, 1836px 1128px #FFF, 1408px 632px #FFF, 1858px 1621px #FFF, 544px 1205px #FFF, 345px 1184px #FFF, 1938px 1109px #FFF, 192px 1494px #FFF, 1308px 1243px #FFF, 1819px 731px #FFF, 1559px 1450px #FFF, 1269px 381px #FFF, 788px 1199px #FFF, 1299px 1083px #FFF, 1100px 1957px #FFF, 1461px 1184px #FFF, 1002px 555px #FFF, 1228px 1605px #FFF, 1695px 1716px #FFF, 174px 1494px #FFF, 96px 1055px #FFF, 1269px 926px #FFF, 1239px 1559px #FFF, 246px 203px #FFF, 1431px 661px #FFF, 663px 451px #FFF, 1408px 1411px #FFF, 1261px 1765px #FFF, 1307px 139px #FFF, 1630px 1200px #FFF, 1256px 1673px #FFF, 1181px 1705px #FFF, 891px 1332px #FFF, 1025px 1234px #FFF, 1974px 1771px #FFF, 878px 899px #FFF, 1812px 1474px #FFF, 1162px 1236px #FFF, 1178px 1858px #FFF, 760px 1339px #FFF, 792px 1205px #FFF, 1424px 1583px #FFF, 1551px 1195px #FFF, 1238px 1306px #FFF, 1308px 1109px #FFF, 1653px 381px #FFF, 160px 185px #FFF, 789px 1837px #FFF, 843px 158px #FFF, 1974px 1313px #FFF, 93px 803px #FFF, 1934px 1279px #FFF, 1236px 97px #FFF, 1502px 1047px #FFF, 1932px 1010px #FFF, 1726px 198px #FFF, 740px 1941px #FFF, 1709px 1819px #FFF, 1215px 1878px #FFF, 1572px 1239px #FFF, 549px 1299px #FFF, 1883px 1361px #FFF, 1050px 1555px #FFF, 1539px 1779px #FFF, 1018px 1292px #FFF, 1862px 158px #FFF, 718px 1658px #FFF, 1319px 1152px #FFF, 1731px 1630px #FFF, 493px 1836px #FFF, 1756px 1716px #FFF, 1059px 1005px #FFF, 1904px 1761px #FFF, 1083px 1941px #FFF, 1109px 1424px #FFF, 1292px 1476px #FFF, 731px 1137px #FFF, 1005px 470px #FFF, 1127px 1133px #FFF, 192px 1245px #FFF, 185px 1121px #FFF, 1474px 1609px #FFF, 1705px 1999px #FFF, 1141px 1869px #FFF, 1279px 1234px #FFF, 1930px 1739px #FFF, 1494px 1308px #FFF, 1756px 1450px #FFF, 1957px 1118px #FFF, 1190px 1500px #FFF, 1757px 1483px #FFF, 1761px 1128px #FFF, 973px 311px #FFF, 512px 109px #FFF, 903px 1998px #FFF, 1042px 1397px #FFF, 1328px 878px #FFF, 843px 1928px #FFF, 1881px 1701px #FFF, 1032px 1832px #FFF, 175px 1556px #FFF, 930px 1801px #FFF, 198px 1256px #FFF, 1450px 101px #FFF, 1337px 1582px #FFF, 1236px 1313px #FFF, 1494px 1739px #FFF, 1059px 1559px #FFF, 1121px 1987px #FFF, 1709px 1100px #FFF, 1184px 93px #FFF, 555px 1588px #FFF, 1709px 1572px #FFF, 1063px 1046px #FFF, 139px 237px #FFF, 1739px 1162px #FFF, 1832px 1802px #FFF, 470px 1151px #FFF, 1921px 1238px #FFF, 1618px 1353px #FFF, 93px 1626px #FFF, 135px 760px #FFF, 97px 1360px #FFF, 175px 1245px #FFF, 930px 1254px #FFF, 1275px 1951px #FFF, 198px 1673px #FFF, 1450px 1127px #FFF, 1337px 1904px #FFF, 1236px 1621px #FFF, 1494px 1637px #FFF, 1059px 1228px #FFF, 1121px 1349px #FFF, 1349px 108px #FFF, 108px 1494px #FFF, 1812px 1921px #FFF, 1238px 1941px #FFF, 1306px 1020px #FFF, 1199px 941px #FFF, 973px 1999px #FFF, 311px 1010px #FFF, 109px 653px #FFF, 129px 1941px #FFF, 1941px 1326px #FFF, 1238px 1195px #FFF, 1306px 1162px #FFF, 1199px 1215px #FFF, 973px 546px #FFF, 311px 966px #FFF, 109px 1600px #FFF, 129px 1294px #FFF, 1941px 1883px #FFF, 1238px 1045px #FFF, 1306px 1141px #FFF, 1199px 886px #FFF, 973px 1776px #FFF, 311px 107px #FFF, 109px 1128px #FFF, 129px 1626px #FFF, 1941px 139px #FFF, 1238px 1862px #FFF, 1306px 1318px #FFF, 1199px 1050px #FFF, 973px 1581px #FFF, 311px 1361px #FFF, 109px 1476px #FFF, 129px 644px #FFF, 1941px 1657px #FFF, 1238px 1801px #FFF, 1306px 108px #FFF, 1199px 1984px #FFF, 973px 1729px #FFF, 311px 578px #FFF, 109px 819px #FFF, 129px 718px #FFF, 1941px 1432px #FFF, 1238px 1898px #FFF, 1306px 1530px #FFF, 1199px 1599px #FFF, 973px 1251px #FFF, 311px 1555px #FFF, 109px 1339px #FFF, 129px 886px #FFF, 1941px 233px #FFF, 1238px 1010px #FFF, 1306px 1046px #FFF, 1199px 1184px #FFF, 973px 1475px #FFF, 311px 1951px #FFF, 109px 1483px #FFF, 129px 1555px #FFF, 1941px 1254px #FFF, 1238px 321px #FFF, 1306px 1114px #FFF, 1199px 1761px #FFF, 973px 1305px #FFF, 311px 446px #FFF, 109px 1162px #FFF, 129px 1948px #FFF, 1941px 1118px #FFF, 1238px 1133px #FFF, 1306px 96px #FFF, 1199px 1559px #FFF, 973px 1790px #FFF, 311px 597px #FFF, 109px 1308px #FFF, 129px 1878px #FFF, 1941px 644px #FFF, 1238px 1137px #FFF, 1306px 1217px #FFF, 1199px 1604px #FFF, 973px 1228px #FFF, 311px 748px #FFF, 109px 1904px #FFF, 129px 1484px #FFF, 1941px 1294px #FFF, 1238px 632px #FFF, 1306px 1055px #FFF, 1199px 1121px #FFF, 973px 1238px #FFF, 311px 1184px #FFF, 109px 1306px #FFF, 129px 1319px #FFF, 1941px 1908px #FFF, 1238px 1951px #FFF, 1306px 1362px #FFF, 1199px 1858px #FFF, 973px 1709px #FFF, 311px 1114px #FFF, 109px 109px #FFF,
+    100px 300px #FFF, 250px 500px #FFF, 50px 800px #FFF, 300px 1200px #FFF, 550px 1500px #FFF, 120px 1800px #FFF, 400px 100px #FFF, 80px 650px #FFF, 450px 900px #FFF, 200px 1400px #FFF, 30px 1700px #FFF, 580px 250px #FFF, 150px 750px #FFF, 350px 1100px #FFF, 500px 1300px #FFF, 70px 1600px #FFF, 420px 1900px #FFF, 220px 50px #FFF, 130px 950px #FFF, 380px 1450px #FFF, 530px 1750px #FFF, 90px 400px #FFF, 270px 850px #FFF, 480px 1150px #FFF, 50px 1950px #FFF, 180px 200px #FFF, 330px 600px #FFF, 510px 1000px #FFF, 110px 1350px #FFF, 430px 1650px #FFF, 20px 100px #FFF, 290px 700px #FFF, 460px 1250px #FFF, 590px 1550px #FFF, 140px 1850px #FFF, 310px 350px #FFF, 570px 880px #FFF, 160px 1180px #FFF, 390px 1080px #FFF, 60px 1480px #FFF, 230px 1780px #FFF, 410px 480px #FFF, 540px 1980px #FFF, 170px 580px #FFF, 360px 1380px #FFF, 560px 680px #FFF, 260px 980px #FFF, 440px 1580px #FFF, 40px 1280px #FFF, 210px 1680px #FFF;
+    animation: animStar 150s linear infinite;
+    z-index: -3;
+}
+
+#stars1::before, #stars2::before, #stars3::before {
+    content: '';
+    position: absolute;
+    width: 1px; /* Must match parent */
+    height: 1px; /* Must match parent */
+    background: transparent;
+    box-shadow: inherit;
+    top: 2000px; /* This MUST match the animation distance */
+}
+#stars2::before {
+    width: 2px;
+    height: 2px;
+}
+#stars3::before {
+    width: 3px;
+    height: 3px;
+}
+
+
+/* Layer 2: Medium stars (200+) - Medium speed */
+#stars2 {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    box-shadow: 1046px 661px #FFF, 1845px 1289px #FFF, 1896px 1063px #FFF, 1515px 430px #FFF, 316px 1007px #FFF, 1307px 1640px #FFF, 1050px 1826px #FFF, 482px 648px #FFF, 1526px 1060px #FFF, 1004px 93px #FFF, 626px 1239px #FFF, 1221px 1474px #FFF, 437px 597px #FFF, 1276px 1974px #FFF, 1386px 903px #FFF, 946px 1904px #FFF, 1530px 1724px #FFF, 345px 1184px #FFF, 1726px 198px #FFF, 1812px 1474px #FFF, 246px 653px #FFF, 1435px 1497px #FFF, 1610px 493px #FFF, 108px 909px #FFF, 174px 1279px #FFF, 1269px 926px #FFF, 1692px 1868px #FFF, 1944px 129px #FFF, 915px 1640px #FFF, 1404px 1731px #FFF, 1584px 1127px #FFF, 1391px 1494px #FFF, 1599px 748px #FFF, 978px 1217px #FFF, 715px 1239px #FFF, 1483px 1361px #FFF, 1338px 1184px #FFF, 1239px 1355px #FFF, 1650px 1812px #FFF, 1705px 1709px #FFF, 1121px 292px #FFF, 1011px 470px #FFF, 141px 718px #FFF, 1735px 1528px #FFF, 1235px 561px #FFF, 1632px 1761px #FFF, 1551px 1195px #FFF, 1146px 1141px #FFF, 1205px 1658px #FFF, 174px 1494px #FFF, 1528px 1500px #FFF, 1706px 1063px #FFF, 1215px 1878px #FFF, 1500px 926px #FFF, 1920px 461px #FFF, 1938px 1243px #FFF, 1251px 1133px #FFF, 1657px 1739px #FFF, 1211px 1826px #FFF, 1553px 259px #FFF, 1190px 1500px #FFF, 1060px 1383px #FFF, 1934px 1279px #FFF, 1756px 1450px #FFF, 1925px 843px #FFF, 1757px 1483px #FFF, 1025px 512px #FFF, 1236px 97px #FFF, 1007px 1881px #FFF, 712px 1551px #FFF, 1138px 578px #FFF, 1832px 1605px #FFF, 891px 1151px #FFF, 1729px 1313px #FFF, 1904px 1761px #FFF, 1431px 1539px #FFF, 1121px 555px #FFF, 1858px 1279px #FFF, 1750px 135px #FFF, 1863px 1756px #FFF, 1118px 470px #FFF, 1004px 973px #FFF, 1308px 1109px #FFF, 1515px 694px #FFF, 1210px 1353px #FFF, 1286px 819px #FFF, 129px 1957px #FFF, 1061px 1974px #FFF, 715px 1292px #FFF, 497px 1217px #FFF, 1629px 1941px #FFF, 1479px 689px #FFF, 1659px 1604px #FFF, 1585px 192px #FFF, 1715px 127px #FFF, 1559px 1450px #FFF, 1101px 1432px #FFF, 1599px 1999px #FFF, 1729px 1930px #FFF, 1624px 1275px #FFF, 177px 446px #FFF, 1705px 1999px #FFF, 1059px 1005px #FFF, 1620px 1709px #FFF, 1060px 248px #FFF, 1065px 1328px #FFF, 167px 1921px #FFF, 1948px 109px #FFF, 1222px 1411px #FFF, 122px 1200px #FFF, 1515px 1114px #FFF, 1948px 1337px #FFF, 1600px 1205px #FFF, 1391px 544px #FFF, 1933px 731px #FFF, 198px 192px #FFF, 1642px 158px #FFF, 423px 1934px #FFF, 725px 95px #FFF, 1184px 878px #FFF, 1723px 1435px #FFF, 1085px 1005px #FFF, 1130px 1475px #FFF, 1502px 376px #FFF, 1178px 1047px #FFF, 1002px 555px #FFF, 1924px 1998px #FFF, 1653px 1305px #FFF, 1768px 1236px #FFF, 1505px 441px #FFF, 1502px 1626px #FFF, 707px 321px #FFF, 1711px 1757px #FFF, 1928px 233px #FFF, 175px 1530px #FFF, 1373px 1776px #FFF, 1275px 1042px #FFF, 1782px 1957px #FFF, 1124px 338px #FFF, 747px 1832px #FFF, 381px 1326px #FFF, 1017px 767px #FFF, 1130px 425px #FFF, 417px 1121px #FFF, 1080px 1133px #FFF, 1851px 1701px #FFF, 1056px 1339px #FFF, 1461px 819px #FFF, 160px 185px #FFF, 1621px 546px #FFF, 1232px 1474px #FFF, 1201px 1898px #FFF, 1924px 1121px #FFF, 1695px 1951px #FFF, 1869px 740px #FFF, 735px 33px #FFF, 1111px 648px #FFF, 1101px 1862px #FFF, 538px 1018px #FFF, 1999px 1190px #FFF, 1801px 899px #FFF, 544px 1205px #FFF, 1629px 1048px #FFF, 101px 1020px #FFF, 1630px 1238px #FFF, 1408px 632px #FFF, 1565px 1355px #FFF, 1459px 584px #FFF, 1735px 441px #FFF, 1269px 1032px #FFF, 1858px 198px #FFF, 1812px 1332px #FFF, 1509px 1240px #FFF, 1286px 973px #FFF, 1391px 1484px #FFF, 109px 1618px #FFF, 1740px 1913px #FFF, 966px 1528px #FFF,
+    /* --- NEW: Added stars --- */
+    150px 200px #FFF, 300px 700px #FFF, 50px 1100px #FFF, 400px 1600px #FFF, 550px 100px #FFF, 100px 900px #FFF, 250px 1300px #FFF, 450px 1800px #FFF, 580px 500px #FFF, 120px 1400px #FFF, 350px 300px #FFF, 80px 1700px #FFF, 500px 800px #FFF, 200px 1200px #FFF, 420px 1950px #FFF, 590px 600px #FFF, 180px 1000px #FFF, 380px 1500px #FFF, 30px 400px #FFF, 480px 1900px #FFF;
+    animation: animStar 100s linear infinite;
+    z-index: -2;
+}
+
+/* Layer 3: Large stars (100+) - Fastest speed */
+#stars3 {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    box-shadow: 1083px 1771px #FFF, 940px 1878px #FFF, 130px 1705px #FFF, 1809px 597px #FFF, 760px 1339px #FFF, 1017px 1306px #FFF, 1920px 886px #FFF, 1733px 93px #FFF, 1640px 1869px #FFF, 1891px 1904px #FFF, 197px 108px #FFF, 1230px 183px #FFF, 1172px 1765px #FFF, 1630px 1200px #FFF, 532px 1238px #FFF, 1181px 1609px #FFF, 459px 1928px #FFF, 1851px 1581px #FFF, 1093px 803px #FFF, 1563px 661px #FFF, 109px 1494px #FFF, 1499px 1045px #FFF, 1489px 1268px #FFF, 1801px 96px #FFF, 1819px 731px #FFF, 911px 1362px #FFF, 1648px 1200px #FFF, 1039px 311px #FFF, 1028px 175px #FFF, 1640px 1733px #FFF, 786px 1360px #FFF, 1269px 1305px #FFF, 552px 1245px #FFF, 1100px 1957px #FFF, 1628px 1215px #FFF, 1307px 139px #FFF, 1790px 1673px #FFF, 1475px 815px #FFF, 1753px 1308px #FFF, 1729px 198px #FFF, 1883px 1361px #FFF, 1665px 789px #FFF, 128px 1228px #FFF, 1908px 1984px #FFF, 1924px 1461px #FFF, 1431px 661px #FFF, 740px 1599px #FFF, 1836px 1128px #FFF, 1974px 1771px #FFF, 1498px 107px #FFF, 663px 1836px #FFF, 929px 1555px #FFF, 847px 1568px #FFF, 897px 1162px #FFF, 1375px 788px #FFF, 1373px 1294px #FFF, 108px 1494px #FFF, 829px 1299px #FFF, 747px 1118px #FFF, 959px 1128px #FFF, 1019px 1546px #FFF, 1577px 697px #FFF, 321px 109px #FFF, 192px 1494px #FFF, 1968px 1951px #FFF, 1032px 97px #FFF, 1431px 1450px #FFF, 1716px 139px #FFF, 1774px 1621px #FFF, 1461px 1184px #FFF, 1494px 1756px #FFF, 1686px 1987px #FFF, 1281px 1046px #FFF, 198px 1484px #FFF, 785px 1583px #FFF, 1512px 1556px #FFF, 1863px 1114px #FFF, 1549px 1630px #FFF, 1727px 1975px #FFF, 1361px 644px #FFF, 1403px 1055px #FFF, 1042px 1397px #FFF, 1316px 1802px #FFF, 1478px 337px #FFF, 1097px 1932px #FFF, 1113px 1100px #FFF, 727px 1709px #FFF, 1378px 1832px #FFF, 810px 1228px #FFF, 1980px 1050px #FFF, 1146px 1275px #FFF, 1228px 1605px #FFF,
+    /* --- NEW: Added stars --- */
+    100px 500px #FFF, 400px 100px #FFF, 50px 1500px #FFF, 300px 1800px #FFF, 550px 700px #FFF, 120px 1200px #FFF, 450px 300px #FFF, 80px 900px #FFF, 500px 1600px #FFF, 250px 1900px #FFF;
+    animation: animStar 50s linear infinite;
+    z-index: -2;
+}
+
+/* The Nebula (Galaxy) effect */
+.nebula {
+    position: fixed; /* This stays fixed so it doesn't scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* This is the default purple nebula for the homepage */
+    background: radial-gradient(ellipse at 70% 30%, rgba(120, 50, 200, 0.3) 0%, rgba(0,0,0,0) 70%),
+                radial-gradient(ellipse at 30% 70%, rgba(50, 100, 200, 0.2) 0%, rgba(0,0,0,0) 60%);
+    z-index: -1; /* Behind content, in front of stars */
+    transition: background 0.8s ease-in-out; /* Smooth fade */
+}
+
+/* --- NEW: Planet-specific Nebula Colors --- */
+.nebula-scrum {
+    background: radial-gradient(ellipse at 70% 30%, rgba(217, 167, 74, 0.3) 0%, rgba(0,0,0,0) 70%), /* Yellow */
+                radial-gradient(ellipse at 30% 70%, rgba(252, 234, 187, 0.2) 0%, rgba(0,0,0,0) 60%); /* Light Gold */
+}
+
+.nebula-kanban {
+    background: radial-gradient(ellipse at 70% 30%, rgba(74, 140, 217, 0.3) 0%, rgba(0,0,0,0) 70%), /* Blue */
+                radial-gradient(ellipse at 30% 70%, rgba(168, 202, 255, 0.2) 0%, rgba(0,0,0,0) 60%); /* Light Blue */
+}
+
+.nebula-xp {
+    background: radial-gradient(ellipse at 70% 30%, rgba(99, 217, 74, 0.3) 0%, rgba(0,0,0,0) 70%), /* Green */
+                radial-gradient(ellipse at 30% 70%, rgba(185, 255, 171, 0.2) 0%, rgba(0,0,0,0) 60%); /* Light Green */
+}
+
+
+/* --- UPDATED: Shooting Stars / Meteors --- */
+.meteor {
+    position: fixed;
+    width: 3px;
+    height: 3px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff;
+    opacity: 0;
+    /* Apply BOTH animations */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear, steps(1); /* Fall animation is linear, position is steps */
+    z-index: 1; 
+}
+
+.meteor::after {
+    content: '';
+    position: absolute;
+    top: 1px; 
+    left: 1px; 
+    width: 250px;
+    height: 1px;
+    background: linear-gradient(to right, currentColor, transparent);
+}
+
+.meteor-1 {
+    color: #FFF;
+    transform: rotate(215deg); /* To Bottom-Left */
+    animation-name: meteor-fall-L, meteor-pos-L-1;
+    animation-duration: 7s, 203s; 
+    animation-delay: 0s, 0s;
+}
+
+.meteor-2 {
+    color: #a8caff;
+    transform: rotate(145deg); /* To Bottom-Right */
+    animation-name: meteor-fall-R, meteor-pos-R-2; 
+    animation-duration: 5s, 199s;
+    animation-delay: 4s, 4s;
+}
+
+.meteor-3 {
+    color: #fceabb;
+    transform: rotate(210deg); /* To Bottom-Left */
+    animation-name: meteor-fall-L, meteor-pos-L-3; 
+    animation-duration: 9s, 211s;
+    animation-delay: 9s, 9s;
+}
+
+.meteor-4 {
+    color: #d6bcff;
+    transform: rotate(145deg); /* To Bottom-Right */
+    animation-name: meteor-fall-R, meteor-pos-R-4; 
+    animation-duration: 6s, 223s;
+    animation-delay: 14s, 14s;
+}
+
+.meteor-5 {
+    color: #b9ffab; 
+    transform: rotate(215deg); /* To Bottom-Left */
+    animation-name: meteor-fall-L, meteor-pos-L-5; 
+    animation-duration: 8s, 229s;
+    animation-delay: 7s, 7s;
+}
+
+
+/* === Language Dropdown === */
+.lang-dropdown {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+}
+
+.lang-selected {
+    background: #7c4dff; /* Active color */
+    border: 1px solid #a381ff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Roboto', 'Cairo', 'Noto Naskh Arabic', sans-serif;
+    padding: 0 1rem;
+    width: 120px; 
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; 
+}
+
+/* --- UPDATED: Dropdown Animation --- */
+.lang-options {
+    position: absolute;
+    top: 100%; 
+    right: 0;
+    background: #2a1443;
+    border: 1px solid #5a3a8a;
+    border-radius: 4px;
+    overflow: hidden; 
+    margin-top: 0.25rem;
+    
+    /* Animation properties */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.2s ease-out; 
+}
+
+/* This class will be toggled by JS */
+.lang-dropdown.open .lang-options {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.lang-options button {
+    background: none;
+    border: none;
+    color: #f0e6ff;
+    font-family: 'Roboto', 'Cairo', 'Noto Naskh Arabic', sans-serif;
+    cursor: pointer;
+    
+    /* Match the selected button style */
+    width: 120px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 0 1rem;
+    box-sizing: border-box;
+    
+    /* --- NEW: Staggered animation styles --- */
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: all 0.3s ease-out;
+}
+
+.lang-options button:hover {
+    background: #4a2b6e;
+}
+
+/* --- NEW: Staggered animation delays --- */
+.lang-dropdown.open .lang-options button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.lang-dropdown.open .lang-options button:nth-child(1) {
+    transition-delay: 0.05s;
+}
+.lang-dropdown.open .lang-options button:nth-child(2) {
+    transition-delay: 0.1s;
+}
+.lang-dropdown.open .lang-options button:nth-child(3) {
+    transition-delay: 0.15s;
+}
+.lang-dropdown.open .lang-options button:nth-child(4) {
+    transition-delay: 0.2s;
+}
+
+
+/* === Layout === */
+.content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    padding-top: 5rem; /* Make space for lang switcher */
+    position: relative;
+    z-index: 1;
+}
+
+/* --- NEW: Back Arrow Button --- */
+.back-arrow-button {
+    position: fixed;
+    top: 1rem;
+    left: 1.5rem; /* Positioned top-left */
+    z-index: 100; /* On the same layer as the language dropdown */
+    width: 44px;  /* Same size as language button */
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #a381ff; /* Default purple */
+    border-radius: 50%; /* Make it round */
+    
+    /* This hides the text "Back to the Agile Universe" */
+    text-indent: -9999px;
+    overflow: hidden;
+    
+    transition: all 0.3s ease-out;
+}
+
+/* This adds the arrow icon using an embedded SVG */
+.back-arrow-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* A white SVG arrow, URL-encoded */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='19' y1='12' x2='5' y2='12'%3E%3C/line%3E%3Cpolyline points='12 19 5 12 12 5'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50%;
+    transition: transform 0.3s ease-out;
+}
+
+/* The hover animation */
+.back-arrow-button:hover {
+    background: #7c4dff; /* Default purple */
+    color: #fff;
+    box-shadow: 0 0 15px rgba(124, 77, 255, 0.5);
+}
+
+.back-arrow-button:hover::before {
+    transform: translateX(-3px); /* The arrow "pulls" to the left */
+}
+
+
+.hero {
+    text-align: center;
+    padding: 2rem 1rem 4rem 1rem;
+}
+
+.hero h1 {
+    font-size: 5.5rem; 
+    font-weight: 900; 
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+    cursor: default;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+.hero h1 span {
+    display: inline-block; 
+    transition: transform 0.1s ease-out, filter 0.1s ease-out;
+    padding: 0 1px;
+    background: linear-gradient(90deg, #f0e6ff, #d6bcff, #c49eff, #f0e6ff);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; 
+    -webkit-text-fill-color: transparent; 
+    animation: gradientShift 5s ease infinite; 
+}
+
+
+.hero .subtitle {
+    font-size: 1.3rem; 
+    font-weight: 300;
+    color: #d6bcff;
+    margin-top: 1rem; 
+}
+
+/* Card Section for main content */
+.card-section {
+    background: rgba(30, 10, 50, 0.6);
+    border: 1px solid #4a2b6e;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(5px);
+    transition: border-color 0.5s ease; /* Added transition */
+}
+
+.card-section h2 {
+    color: #e0cfff;
+    border-bottom: 2px solid #7c4dff;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+    transition: border-color 0.5s ease, color 0.5s ease; /* Added transition */
+}
+
+/* === Section 2: Agile Values === */
+.values-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.value-card {
+    background: #2a1443;
+    border: 1px solid #5a3a8a;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.value-card h3 {
+    color: #fff;
+    margin-bottom: 0.25rem;
+}
+
+.value-card .over-text {
+    color: #c7aeff;
+    font-style: italic;
+    margin: 0 0 1rem 0;
+}
+
+.value-card .explanation {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+
+/* === Section 3: 12 Principles === */
+.principles-grid {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    counter-reset: list-item; 
+}
+
+.principles-grid li {
+    background: #2a1443;
+    border: 1px solid #4a2b6e;
+    border-radius: 8px;
+    padding: 1.5rem;
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 4.5rem; 
+    margin-bottom: 1.5rem;
+    counter-increment: list-item;
+}
+
+.principles-grid li:last-child {
+    margin-bottom: 0;
+}
+
+.principles-grid li::before {
+    content: counter(list-item);
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    font-weight: 700;
+    color: #7c4dff;
+    width: 3rem;
+    text-align: center;
+    transition: color 0.5s ease; /* Added transition */
+}
+
+/* === Section 4: Planets === */
+.planet-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.5rem; 
+}
+
+.planet-card { 
+    background: #2a1443; 
+    border: 1px solid #5a3a8a; 
+    border-radius: 8px; 
+    padding: 1.5rem; 
+    text-align: center; 
+    transition: transform 0.4s ease-out, box-shadow 0.4s ease-out; 
+}
+
+.planet-card:hover { 
+    transform: translateY(-10px); /* The card lifts up */
+    box-shadow: 0 10px 20px rgba(124, 77, 255, 0.3); 
+    border-color: #a381ff; 
+}
+
+.planet-card h3 { 
+    color: #fff; 
+    margin-top: 1rem; 
+    margin-bottom: 0.5rem; 
+}
+.planet-card p { 
+    font-size: 0.9rem; 
+    color: #c7aeff; 
+    margin-bottom: 0; 
+}
+
+.planet-graphic { 
+    width: 120px; 
+    height: 120px; 
+    margin: 0 auto;
+    position: relative; 
+    transition: transform 0.4s ease-out;
+}
+
+.planet-graphic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; 
+    background-size: cover; 
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2), inset 0 0 10px rgba(0,0,0,0.3);
+    animation: rotatePlanet 20s linear infinite;
+    transition: box-shadow 0.4s ease-out;
+}
+
+.planet-card:hover .planet-graphic {
+    transform: scale(1.1); /* The container scales */
+}
+
+.planet-card:hover .planet-graphic::before {
+    /* The glow effect */
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4), 
+                0 0 40px rgba(196, 158, 255, 0.5), 
+                inset 0 0 10px rgba(0,0,0,0.3);
+}
+
+.scrum-planet::before { 
+    background-color: #d9a74a; 
+    background-image: linear-gradient(135deg, #fceabb 25%, #d9a74a 25%, #d9a74a 50%, #fceabb 50%, #fceabb 75%, #d9a74A 75%, #d9a74a 100%); 
+}
+.kanban-planet::before { 
+    background-color: #4a8cd9; 
+    background-image: 
+        /* Crater 1 (dark, semi-transparent) */
+        radial-gradient(circle at 30% 60%, rgba(40, 80, 150, 0.5) 0%, rgba(40, 80, 150, 0) 10%),
+        /* Crater 2 */
+        radial-gradient(circle at 65% 70%, rgba(40, 80, 150, 0.5) 0%, rgba(40, 80, 150, 0) 15%),
+        /* Crater 3 */
+        radial-gradient(circle at 55% 30%, rgba(40, 80, 150, 0.5) 0%, rgba(40, 80, 150, 0) 8%),
+        /* Base Planet */
+        radial-gradient(circle at 20% 30%, #a8caff, #4a8cd9 70%);
+}
+.xp-planet::before { 
+    background-color: #63d94a; 
+    background-image: linear-gradient(45deg, #b9ffab 25%, #63d94a 25%, #63d94a 50%, #b9ffab 50%, #b9ffab 75%, #63d9a0 75%, #63d94a 100%); 
+}
+
+/* --- NEW: Content styles for new pages --- */
+.pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.pillar-card {
+    background: #2a1443;
+    border: 1px solid #5a3a8a;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: border-color 0.5s ease; /* Added transition */
+}
+
+.roles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.role-card {
+    background: #2a1443;
+    border: 1px solid #5a3a8a;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: border-color 0.5s ease; /* Added transition */
+}
+
+.values-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.values-list li {
+    background: #2a1443;
+    border-left: 4px solid #7c4dff;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.5s ease; /* Added transition */
+}
+
+.values-list li strong {
+    color: #e0cfff;
+    transition: color 0.5s ease; /* Added transition */
+}
+
+
+/* === RTL Support === */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .card-section h2 {
+    display: block;
+}
+
+[dir="rtl"] .principles-grid {
+    padding-right: 0;
+}
+
+[dir="rtl"] .principles-grid li {
+    padding-left: 1.5rem;
+    padding-right: 4.5rem; /* RTL padding for number */
+}
+
+[dir="rtl"] .principles-grid li::before {
+    left: auto;
+    right: 1rem;
+}
+
+[dir="rtl"] .values-list li {
+    border-left: none; /* Remove left border */
+    border-right: 4px solid #7c4dff; /* Add right border */
+}
+
+/* === Animation Keyframes === */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes rotatePlanet {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* --- UPDATED: Meteor Fall Animations --- */
+@keyframes meteor-fall-L { 0% { opacity: 0; transform: translate(0, 0); } 10% { opacity: 1; } 90% { opacity: 1; } 100% { opacity: 0; transform: translate(-1000px, 1000px); } }
+@keyframes meteor-fall-R { 0% { opacity: 0; transform: translate(0, 0); } 10% { opacity: 1; } 90% { opacity: 1; } 100% { opacity: 0; transform: translate(1000px, 1000px); } } 
+
+
+/* --- UPDATED: Meteor Position Animations --- */
+@keyframes meteor-pos-L-1 { 0% { top: 100px; right: 300px; } 20% { top: 300px; right: 800px; } 40% { top: -50px; right: 400px; } 60% { top: 200px; right: 100px; } 80% { top: 50px; right: 600px; } 100% { top: 100px; right: 300px; } }
+@keyframes meteor-pos-R-2 { 0% { top: 200px; left: 100px; } 20% { top: 50px; left: 500px; } 40% { top: 150px; left: -100px; } 60% { top: 300px; left: 900px; } 80% { top: 100px; left: 200px; } 100% { top: 200px; left: 100px; } } 
+@keyframes meteor-pos-L-3 { 0% { top: 50px; right: 500px; } 20% { top: 150px; right: 100px; } 40% { top: 350px; right: 700px; } 60% { top: 100px; right: 300px; } 80% { top: -20px; right: 800px; } 100% { top: 50px; right: 500px; } }
+@keyframes meteor-pos-R-4 { 0% { top: 300px; left: 800px; } 20% { top: 200px; left: 200px; } 40% { top: 50px; left: 600px; } 60% { top: 400px; left: 1000px; } 80% { top: 100px; left: -50px; } 100% { top: 300px; left: 800px; } } 
+@keyframes meteor-pos-L-5 { 0% { top: 150px; right: -100px; } 20% { top: 100px; right: 400px; } 40% { top: 250px; right: 800px; } 60% { top: 50px; right: 300px; } 80% { top: 300px; right: 600px; } 100% { top: 150px; right: -100px; } }
+
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+footer p {
+    font-weight: 300;
+    font-size: 0.9rem;
+    
+    /* FIX: Force LTR for the English copyright text */
+    direction: ltr; 
+    
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    background: linear-gradient(90deg, #f0e6ff, #d6bcff, #c49eff, #f0e6ff);
+    background-size: 200% auto;
+    animation: gradientShift 5s ease infinite;
+    white-space: nowrap;
+    cursor: default;
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Style for each letter in the footer */
+footer p span {
+    display: inline-block; 
+    transition: transform 0.1s ease-out, filter 0.1s ease-out;
+    padding: 0 1px;
+    
+    background: inherit;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; 
+    -webkit-text-fill-color: transparent; 
+}
+
+
+/* === Responsive for Mobile === */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3.5rem; /* Adjusted for mobile */
+        white-space: normal; /* Allow title to wrap on mobile */
+    }
+
+    .values-grid,
+    .planet-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pillars-grid,
+    .roles-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   NEW: THEME OVERRIDES
+=========================================
+*/
+
+/* --- Scrum Theme (Yellow/Gold) --- */
+.theme-scrum .lang-selected {
+    background-color: #d9a74a;
+    border-color: #fceabb;
+}
+.theme-scrum .lang-options button:hover {
+    background-color: #8c6c30;
+}
+.theme-scrum .back-arrow-button {
+    border-color: #d9a74a;
+}
+.theme-scrum .back-arrow-button:hover {
+    background-color: #d9a74a;
+    box-shadow: 0 0 15px rgba(217, 167, 74, 0.7);
+}
+.theme-scrum .hero h1 span,
+.theme-scrum footer p span {
+    background-image: linear-gradient(90deg, #fef9e7, #fceabb, #d9a74a, #fef9e7);
+}
+.theme-scrum .card-section {
+    border-color: #8c6c30;
+}
+.theme-scrum .card-section h2 {
+    border-bottom-color: #d9a74a;
+    color: #fceabb; /* NEW */
+}
+.theme-scrum .pillar-card,
+.theme-scrum .role-card {
+    border-color: #8c6c30;
+}
+.theme-scrum .pillar-card h3,
+.theme-scrum .role-card h3,
+.theme-scrum .values-list li strong {
+    color: #fceabb;
+}
+.theme-scrum .values-list li {
+    border-left-color: #d9a74a;
+}
+[dir="rtl"] .theme-scrum .values-list li {
+    border-right-color: #d9a74a;
+    border-left: none;
+}
+
+
+/* --- Kanban Theme (Blue) --- */
+.theme-kanban .lang-selected {
+    background-color: #4a8cd9;
+    border-color: #a8caff;
+}
+.theme-kanban .lang-options button:hover {
+    background-color: #2a5d91;
+}
+.theme-kanban .back-arrow-button {
+    border-color: #4a8cd9;
+}
+.theme-kanban .back-arrow-button:hover {
+    background-color: #4a8cd9;
+    box-shadow: 0 0 15px rgba(74, 140, 217, 0.7);
+}
+.theme-kanban .hero h1 span,
+.theme-kanban footer p span {
+    background-image: linear-gradient(90deg, #e4f0ff, #a8caff, #4a8cd9, #e4f0ff);
+}
+.theme-kanban .card-section {
+    border-color: #2a5d91;
+}
+.theme-kanban .card-section h2 {
+    border-bottom-color: #4a8cd9;
+    color: #a8caff; /* NEW */
+}
+.theme-kanban .pillar-card,
+.theme-kanban .role-card {
+    border-color: #2a5d91;
+}
+.theme-kanban .pillar-card h3,
+.theme-kanban .role-card h3,
+.theme-kanban .values-list li strong {
+    color: #a8caff;
+}
+.theme-kanban .values-list li {
+    border-left-color: #4a8cd9;
+}
+[dir="rtl"] .theme-kanban .values-list li {
+    border-right-color: #4a8cd9;
+    border-left: none;
+}
+
+
+/* --- XP Theme (Green) --- */
+.theme-xp .lang-selected {
+    background-color: #63d94a;
+    border-color: #b9ffab;
+}
+.theme-xp .lang-options button:hover {
+    background-color: #3a8c2b;
+}
+.theme-xp .back-arrow-button {
+    border-color: #63d94a;
+}
+.theme-xp .back-arrow-button:hover {
+    background-color: #63d94a;
+    box-shadow: 0 0 15px rgba(99, 217, 74, 0.7);
+}
+.theme-xp .hero h1 span,
+.theme-xp footer p span {
+    background-image: linear-gradient(90deg, #e6ffde, #b9ffab, #63d94a, #e6ffde);
+}
+.theme-xp .card-section {
+    border-color: #3a8c2b;
+}
+.theme-xp .card-section h2 {
+    border-bottom-color: #63d94a;
+    color: #b9ffab; /* NEW */
+}
+.theme-xp .pillar-card,
+.theme-xp .role-card {
+    border-color: #3a8c2b;
+}
+.theme-xp .pillar-card h3,
+.theme-xp .role-card h3,
+.theme-xp .values-list li strong {
+    color: #b9ffab;
+}
+.theme-xp .values-list li {
+    border-left-color: #63d94a;
+}
+[dir="rtl"] .theme-xp .values-list li {
+    border-right-color: #63d94a;
+    border-left: none;
+}
